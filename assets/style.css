@@ -18,4 +18,14 @@
     --bulet_point_text1:#0C1821;
     --bulet_point_text2:#FFFFFF;
     --tlacidla_text:#FFFFFF;
+    --okno:#FFFFFF;
+
+    --nadpisy_projektov: "Allerta Stencil", sans-serif;
+    --font-text: "Inter", sans-serif;
+    --velke_nadpisy: "Inria Serif", serif;
+
+    --medzera-s: 1rem;
+    --medzera-m: 1.5rem;
+    --medzera-l: 2rem;
+    --medzera-xl: 3rem;
 }
