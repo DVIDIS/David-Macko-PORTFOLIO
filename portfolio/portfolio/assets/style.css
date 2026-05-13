@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); /*Allerta Stencil-Nadpisy projektor*/
+
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');/*Text*/
+
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');/*Velke nadpisy*/
+
+:root{
+    --pozadie: #F3F3F7;
+    --footer:#95959D;
+    --primarna: #324A5F;
+    --tlacidla: #324A5F;
+    --menu:#324A5F;
+    --menu_text:#000000;
+    --nadpis:#1B2A41;
+    --pod_nadpis:#000000;
+    --nadpisy_projektov:#0C1821;
+    --text:#0C1821;
+    --bulet_point_text1:#0C1821;
+    --bulet_point_text2:#FFFFFF;
+    --tlacidla_text:#FFFFFF;
+}
