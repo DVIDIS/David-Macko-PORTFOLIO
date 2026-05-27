@@ -30,357 +30,223 @@
     --medzera-xl: 3rem;
 }
 
-@media (max-width: 720px){
-
-    
-    body{
-        background-color:var(--pozadie);
-        font-family:var(--font-text);
-    padding:var(--medzera-s);
-    color:var(--text);
-}
 
 
-.header{
-    width:100%;
-    max-width:1200px;
-    
-    margin:auto;
-    
-    background-color:var(--menu);
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    
-    padding:var(--medzera-m);
-    
-    border-bottom-left-radius:35px;
-    border-bottom-right-radius:35px;
-    
-    position:relative;
-}
-
-.header__logo img{
-    width:80px;
-}
-
-.header__menu{
-    font-size:2.2rem;
-    color:var(--bulet_point_text2);
-    
-    cursor:pointer;
-    
-    display:none;
-}
-
-.header__nav{
-    display:flex;
-    gap:var(--medzera-l);
-}
-
-.header__link{
-    text-decoration:none;
-    
-    color:var(--tlacidla_text);
-    
-    font-size:1rem;
-    
-    transition:0.3s;
-}
-
-.header__link:hover{
-    opacity:0.7;
-}
-
-
-
-.main{
-    width:100%;
-    max-width:1200px;
-    
-    margin:auto;
-    
-    background-color:var(--pozadie);
-
-    padding:var(--medzera-xl);
-    }
-    
-    .hero{
-        display:flex;
-        justify-content:space-between;
-        align-items:center;
-        
-        gap:var(--medzera-xl);
-        
-        margin-bottom:5rem;
-    }
-    
-    .hero__obrazok img{
-        width:320px;
-        height:380px;
-        
-        object-fit:cover;
-    }
-    
-    .hero__obsah{
-        max-width:500px;
-    }
-    
-    .hero__nadpis{
-        font-size:4rem;
-    line-height:4.5rem;
-
-    color:var(--nadpis);
-    
-    font-family:var(--font-nadpis);
-    
-    margin-bottom:var(--medzera-m);
-}
-
-.hero__text{
-    font-size:1rem;
-    line-height:1.8;
-    
-    color:var(--text);
-    
-    margin-bottom:var(--medzera-l);
-}
-
-.hero__tlacidlo{
-    background-color:var(--tlacidla);
-    color:var(--tlacidla_text);
-    
-    border:none;
-    border-radius:30px;
-    
-    padding:0.9rem 2rem;
-    
-    cursor:pointer;
-    
-    font-size:1rem;
-    
-    transition:0.3s;
-    
-    box-shadow:0 4px 10px rgba(0,0,0,0.15);
-}
-
-.hero__tlacidlo:hover{
-    transform:translateY(-3px);
-}
-
-
-
-.projekty{
-    display:flex;
-    flex-direction:column;
-
-    gap:var(--medzera-l);
-}
-
-.projekty__nadpis{
-    font-size:2rem;
-    
-    color:var(--nadpisy_projektov);
-    
-    font-family:var(--font-projekty);
-    
-    margin-bottom:var(--medzera-s);
-}
-
-.projekty article{
-    background-color:var(--okno);
-    
-    padding:var(--medzera-m);
-    
-    border-radius:20px;
-    
-    box-shadow:0 4px 12px rgba(0,0,0,0.12);
-}
-
-.projekty__karta__nadpis,
-.projekt__karta__nadpis{
-    font-size:1.2rem;
-    
-    margin-bottom:var(--medzera-m);
-    
-    color:var(--nadpisy_projektov);
-    
-    font-family:var(--font-projekty);
-}
-
-.projekty__obsah{
-    display:flex;
-    align-items:center;
-    
-    gap:var(--medzera-l);
-}
-
-.projekty__obrazok{
-    width:180px;
-    height:180px;
-    
-    object-fit:cover;
-
-    border-radius:10px;
-}
-
-.projekty__info{
-    font-size:0.95rem;
-    line-height:1.7;
-    
-    color:var(--text);
-}
-
-.projekty__tlacidlo{
-    align-self:center;
-
-    background-color:var(--tlacidla);
-    color:var(--tlacidla_text);
-    
-    border:none;
-    border-radius:30px;
-    
-    padding:0.9rem 2rem;
-    
-    cursor:pointer;
-    
-    font-size:1rem;
-    
-    transition:0.3s;
-    
-    margin-top:var(--medzera-m);
-    
-    box-shadow:0 4px 10px rgba(0,0,0,0.15);
-}
-
-.projekty__tlacidlo:hover{
-    transform:translateY(-3px);
-}
-
-
-
-.footer{
-    width:100%;
-    max-width:1200px;
-
-    margin:auto;
-    
-    background-color:var(--footer);
-    
-    padding:var(--medzera-m);
-    
-    text-align:center;
-}
-
-.footer__text{
-    font-size:0.9rem;
-    color:var(--text);
-}
 
 
 
 @media(max-width:768px){
-    
+
     body{
-        padding:0.6rem;
+        padding:0;
+        background:var(--pozadie);
+        font-family:var(--font-text);
     }
-    
 
-    
+      /* HEADER */
+
     .header{
-        padding:1rem 1.2rem;
+        padding:var(--medzera-s);
+
+        background:var(--menu);
+
+        border-radius:0;
+
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
     }
-    
+
+    .header__logo img{
+        width:70px;
+    }
+
     .header__menu{
-        display:block;
+        width:65px;
+        height:65px;
+
+        background:var(--menu);
+
+        color:var(--bulet_point_text2);
+
+        border-radius:50%;
+
+        display:flex;
+        justify-content:center;
+        align-items:center;
+
+        font-size:2rem;
+
+        cursor:pointer;
     }
-    
+
     .header__nav{
-        position:absolute;
-        
-        top:100%;
-        left:0;
-        
-        width:100%;
-
-        background-color:var(--menu);
-        
         display:none;
-        flex-direction:column;
-        
-        padding:var(--medzera-m);
-        
-        gap:var(--medzera-m);
-        
-        border-radius:0 0 20px 20px;
     }
-    
-    .header__link{
-        font-size:1rem;
-    }
-    
 
-    
+    /*Main*/
+
     .main{
-        padding:2rem 1.2rem;
+        padding:var(--medzera-xl) var(--medzera-m);
+        background:var(--pozadie);
     }
-    
 
-    
+    /*Hero*/
+
     .hero{
+        display:flex;
         flex-direction:column;
+
+        align-items:center;
         text-align:center;
+
+        gap:var(--medzera-l);
+
+        margin-bottom:6rem;
     }
-    
+
     .hero__obrazok img{
         width:100%;
-        max-width:260px;
-        height:auto;
-    }
-    
-    .hero__nadpis{
-        font-size:2.5rem;
-        line-height:3rem;
-    }
-    
-    .hero__text{
-        font-size:0.95rem;
-    }
-    
+        max-width:270px;
 
-    
-    .projekty__nadpis{
-        text-align:center;
-        font-size:1.6rem;
+        height:auto;
+
+        object-fit:cover;
     }
-    
-    .projekty__obsah{
-        flex-direction:column;
-        text-align:center;
-    }
-    
-    .projekty__obrazok{
+
+    .hero__obsah{
         width:100%;
-        max-width:220px;
-        height:auto;
     }
-    
-    .projekty__info{
-        font-size:0.9rem;
-    }
-    
 
-    
-    .footer{
-        padding:1rem;
+    .hero__nadpis{
+        font-family:var(--velke_nadpisy);
+
+        color:var(--nadpis);
+
+        font-size:2.5rem;
+        line-height:3.3rem;
+
+        margin-bottom:var(--medzera-l);
     }
-    
+
+    .hero__text{
+        color:var(--text);
+
+        font-size:1rem;
+        line-height:1.7;
+
+        margin-bottom:var(--medzera-l);
+    }
+
+    .hero__tlacidlo{
+        background:var(--tlacidla);
+        color:var(--tlacidla_text);
+
+        border:none;
+        border-radius:40px;
+
+        padding:1rem 2.2rem;
+
+        font-size:1rem;
+
+        cursor:pointer;
+
+        box-shadow:0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    /*Projekty*/
+
+    .projekty{
+        display:flex;
+        flex-direction:column;
+
+        gap:var(--medzera-l);
+    }
+
+    .projekty__nadpis{
+        font-family:var(--nadpisy_projektov);
+
+        color:var(--nadpisy_projektov);
+
+        font-size:2rem;
+
+        margin-bottom:var(--medzera-s);
+    }
+
+    .projekty article{
+        background:var(--okno);
+
+        padding:var(--medzera-m);
+
+        border-radius:25px;
+
+        box-shadow:0 4px 12px rgba(0,0,0,0.12);
+    }
+
+    .projekty__karta__nadpis,
+    .projekt__karta__nadpis{
+        font-family:var(--nadpisy_projektov);
+
+        color:var(--bulet_point_text1);
+
+        font-size:1.2rem;
+
+        margin-bottom:var(--medzera-m);
+    }
+
+    .projekty__obsah{
+        display:flex;
+        align-items:center;
+
+        gap:var(--medzera-m);
+    }
+
+    .projekty__obrazok{
+        width:140px;
+        height:140px;
+
+        object-fit:cover;
+    }
+
+    .projekty__info{
+        color:var(--text);
+
+        font-size:0.95rem;
+        line-height:1.5;
+    }
+
+    .projekty__tlacidlo{
+        align-self:flex-end;
+
+        background:var(--tlacidla);
+        color:var(--tlacidla_text);
+
+        border:none;
+        border-radius:30px;
+
+        padding:0.8rem 1.4rem;
+
+        font-size:0.9rem;
+
+        cursor:pointer;
+
+        box-shadow:0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    /*Footer*/
+
+    .footer{
+        background:var(--footer);
+
+        padding:var(--medzera-m);
+
+        text-align:center;
+    }
+
     .footer__text{
+        color:var(--text);
+
         font-size:0.8rem;
         line-height:1.5;
     }
-}
-
-
 }
