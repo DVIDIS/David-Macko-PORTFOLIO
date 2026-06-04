@@ -1,0 +1,1060 @@
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); /*Allerta Stencil-Nadpisy projektor*/
+
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');/*Text*/
+
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');/*Velke nadpisy*/
+ 
+:root{
+    --pozadie: #F3F3F7;
+    --footer:#95959D;
+    --primarna: #324A5F;
+    --tlacidla: #324A5F;
+    --menu:#324A5F;
+    --menu_text:#000000;
+    --nadpis:#1B2A41;
+    --pod_nadpis:#000000;
+    --nadpisy_projektov:#0C1821;
+    --text:#0C1821;
+    --bulet_point_text1:#0C1821;
+    --bulet_point_text2:#FFFFFF;
+    --tlacidla_text:#FFFFFF;
+    --okno:#FFFFFF;
+ 
+    --nadpisy_projektov: "Allerta Stencil", sans-serif;
+    --font-text: "Inter", sans-serif;
+    --velke_nadpisy: "Inria Serif", serif;
+ 
+    --medzera-s: 1rem;
+    --medzera-m: 1.5rem;
+    --medzera-l: 2rem;
+    --medzera-xl: 3rem;
+}
+ 
+ 
+ 
+ 
+ 
+ 
+*{
+
+    box-sizing:border-box;
+
+}
+
+body{
+    padding: 0;
+    margin:0;
+
+    background:var(--pozadie);
+
+    color:var(--text);
+
+    font-family:var(--font-text);
+
+}
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+/* HEADER */
+
+.header{
+
+    height:74px;
+
+    background:var(--primarna);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 16px;
+    margin: 0;
+
+}
+
+.header__logo img{
+
+    width:82px;
+
+}
+
+.header__menu{
+
+    display:flex;
+
+    background:none;
+
+    border:none;
+
+    color:#111;
+
+    font-size:34px;
+
+    cursor:pointer;
+
+}
+
+.header__nav{
+
+    display:none;
+
+}
+
+.header__nav--open{
+
+    display:flex;
+
+    position:absolute;
+
+    top:74px;
+
+    left:0;
+
+    width:100%;
+
+    background:var(--primarna);
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:20px 0;
+
+    z-index:10;
+
+}
+
+.header__link{
+
+    color:white;
+
+    font-weight:700;
+
+}
+
+/* MAIN */
+
+.main{
+
+    padding:14px 18px 90px;
+    margin: 0;
+    
+
+}
+
+/* INDEX + O MNE HERO */
+
+.hero{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+    gap:22px;
+
+    margin-bottom:58px;
+
+}
+
+.o_mne .hero{
+
+    align-items:flex-start;
+
+    text-align:left;
+
+    margin-bottom:42px;
+
+}
+
+.hero__obrazok img{
+
+    width:250px;
+
+    height:auto;
+
+    object-fit:cover;
+
+}
+
+.o_mne .hero__obrazok img{
+
+    width:250px;
+
+}
+
+.hero__nadpis{
+
+    font-family:var(--font-nadpis);
+
+    color:var(--nadpis);
+
+    font-size:26px;
+
+    line-height:1.25;
+
+    margin:0 0 22px;
+
+}
+
+.index .hero__nadpis{
+
+    font-family:var(--font-text);
+
+    font-size:20px;
+
+    font-weight:800;
+
+    max-width:250px;
+
+    margin:0 auto 24px;
+
+}
+
+.hero__text{
+
+    font-size:14px;
+
+    line-height:1.45;
+
+    margin:0 0 26px;
+
+}
+
+.hero__tlacidlo{
+
+    display:inline-block;
+
+    background:var(--primarna);
+
+    color:white;
+
+    padding:12px 28px;
+
+    border-radius:28px;
+
+    font-size:13px;
+
+    box-shadow:0 4px 8px rgba(0,0,0,.25);
+
+    transition:.25s;
+
+}
+
+.hero__tlacidlo:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* IKONY O MNE */
+
+.hero__icons{
+
+    display:flex;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+    margin-top:28px;
+
+}
+
+.icon_badge{
+
+    width:56px;
+
+    height:56px;
+
+    border-radius:8px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:22px;
+
+    font-weight:800;
+
+    box-shadow:0 3px 7px rgba(0,0,0,.25);
+
+}
+
+/* PROJEKTY NA INDEXE */
+
+.projekty{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+.projekty__nadpis{
+
+    font-family:var(--font-projekty);
+
+    font-size:14px;
+
+    margin:0 0 12px;
+
+    color:#111;
+
+}
+
+.index .projekty__nadpis{
+
+    margin-top:10px;
+
+}
+
+.projekty article{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:14px;
+
+    box-shadow:0 4px 8px rgba(0,0,0,.25);
+
+}
+
+.projekty__karta__nadpis{
+
+    font-family:var(--font-projekty);
+
+    font-size:13px;
+
+    margin:0 0 12px;
+
+    color:#111;
+
+}
+
+.projekty__karta__nadpis::before{
+
+    content:"• ";
+
+}
+
+.projekty__obsah{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.projekty__obrazok{
+
+    width:130px;
+
+    height:130px;
+
+    object-fit:cover;
+
+}
+
+.projekty__info{
+
+    flex:1;
+
+    font-size:11px;
+
+    line-height:1.35;
+
+    margin:0;
+
+}
+
+.projekty__tlacidlo{
+
+    align-self:flex-end;
+
+    background:var(--primarna);
+
+    color:white;
+
+    font-size:9px;
+
+    padding:9px 15px;
+
+    border-radius:20px;
+
+    box-shadow:0 3px 7px rgba(0,0,0,.25);
+
+}
+
+/* O MNE - ZRUČNOSTI */
+
+.o_mne .projekty{
+
+    gap:14px;
+
+}
+
+.o_mne .projekty__nadpis{
+
+    font-family:var(--font-nadpis);
+
+    font-size:24px;
+
+    margin:30px 0 12px;
+
+}
+
+.o_mne .projekty article{
+
+    padding:13px 18px;
+
+    border-radius:18px;
+
+}
+
+.o_mne .projekty article:nth-of-type(odd){
+
+    background:var(--primarna);
+
+    color:white;
+
+}
+
+.o_mne .projekty article:nth-of-type(even){
+
+    background:white;
+
+    color:#111;
+
+}
+
+.o_mne .projekty__karta__nadpis{
+
+    font-family:var(--font-text);
+
+    font-size:13px;
+
+    font-weight:400;
+
+    margin:0;
+
+}
+
+.o_mne .projekty__karta__nadpis::before{
+
+    content:"";
+
+}
+
+.o_mne .projekty__obsah{
+
+    display:block;
+
+}
+
+.projekty__list{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+
+    font-size:12px;
+
+    line-height:1.35;
+
+}
+
+.projekty__list li::before{
+
+    content:"• ";
+
+}
+
+/* PORTFÓLIO */
+
+.portfolio .hero{
+
+    align-items:flex-start;
+
+    text-align:left;
+
+    margin-bottom:18px;
+
+}
+
+.portfolio .hero__nadpis{
+
+    font-size:28px;
+
+    margin-bottom:10px;
+
+}
+
+.portfolio .hero__text{
+
+    font-size:11px;
+
+    margin:0;
+
+}
+
+.portfolio-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.portfolio-card{
+
+    background:white;
+
+    border-radius:16px;
+
+    padding:12px;
+
+    box-shadow:0 4px 8px rgba(0,0,0,.28);
+
+    display:grid;
+
+    grid-template-columns:118px 1fr;
+
+    column-gap:18px;
+
+    min-height:178px;
+
+}
+
+.portfolio-card__image{
+
+    grid-column:1;
+
+    grid-row:2 / 4;
+
+    width:118px;
+
+    height:118px;
+
+    overflow:hidden;
+
+}
+
+.portfolio-card__image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.portfolio-card__content{
+
+    display:contents;
+
+}
+
+.portfolio-card__title{
+
+    grid-column:1 / 3;
+
+    font-family:var(--font-text);
+
+    font-size:12px;
+
+    font-weight:700;
+
+    margin:0 0 12px;
+
+    color:#111;
+
+}
+
+.portfolio-card__title::before{
+
+    content:"• ";
+
+}
+
+.portfolio-card__description{
+
+    grid-column:2;
+
+    grid-row:2;
+
+    font-size:10.5px;
+
+    line-height:1.25;
+
+    margin:24px 0 0;
+
+}
+
+.portfolio-card__footer{
+
+    grid-column:1 / 3;
+
+    grid-row:3;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-end;
+
+    margin-top:10px;
+
+}
+
+.portfolio-card__tool-icon{
+
+    width:22px;
+
+    height:22px;
+
+    object-fit:contain;
+
+    border-radius:4px;
+
+}
+
+.btn,
+
+.btn--project{
+
+    border:none;
+
+    background:var(--primarna);
+
+    color:white;
+
+    border-radius:18px;
+
+    padding:7px 10px;
+
+    font-size:8px;
+
+    line-height:1.05;
+
+    cursor:pointer;
+
+    box-shadow:0 3px 6px rgba(0,0,0,.25);
+
+}
+
+.btn--project:hover{
+
+    transform:translateY(-2px);
+
+}
+
+/* MODAL PORTFÓLIO */
+
+.portfolio-modal{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.85);
+
+    z-index:100;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+}
+
+.portfolio-modal--open{
+
+    display:flex;
+
+}
+
+.portfolio-modal__content{
+
+    background:white;
+
+    border-radius:14px;
+
+    padding:20px;
+
+    max-width:90vw;
+
+    max-height:90vh;
+
+    overflow:auto;
+
+    position:relative;
+
+}
+
+.portfolio-modal__close{
+
+    position:absolute;
+
+    top:8px;
+
+    right:12px;
+
+    border:none;
+
+    background:none;
+
+    font-size:34px;
+
+    cursor:pointer;
+
+}
+
+.portfolio-modal__title{
+
+    font-family:var(--font-nadpis);
+
+    margin:35px 0 18px;
+
+}
+
+.portfolio-modal__image{
+
+    max-width:800px;
+
+    width:100%;
+
+    border-radius:10px;
+
+}
+
+/* KONTAKT */
+
+.kontakt{
+
+    min-height:100vh;
+
+    padding:0px 0px 120px;
+
+    background:var(--pozadie);
+
+}
+
+.kontakt__nadpis{
+
+    font-family:var(--font-nadpis);
+
+    font-size:28px;
+
+    color:var(--nadpis);
+
+    margin:0 0 42px;
+
+}
+
+.kontakt__podnadpis{
+
+    font-size:26px;
+
+    font-weight:400;
+
+    margin:0 0 38px;
+
+}
+
+.kontakt__text{
+
+    font-size:12px;
+
+    font-weight:700;
+
+    line-height:1.35;
+
+    margin:0 0 46px;
+
+    max-width:360px;
+
+}
+
+.formular__obsah{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:26px;
+
+}
+
+.formular__riadok{
+
+    display:flex;
+
+    gap:16px;
+
+}
+
+.formular__pole{
+
+    width:100%;
+
+    height:27px;
+
+    border:2px solid #111;
+
+    border-radius:7px;
+
+    background:transparent;
+
+    padding:0 8px;
+
+    font-size:11px;
+
+}
+
+.formular__sprava{
+
+    width:100%;
+
+    height:110px;
+
+    border:2px solid #111;
+
+    border-radius:7px;
+
+    background:transparent;
+
+    resize:none;
+
+    padding:10px;
+
+    font-family:var(--font-text);
+
+    font-size:11px;
+
+}
+
+.formular__pole:focus,
+
+.formular__sprava:focus{
+
+    outline:none;
+
+    border-color:var(--primarna);
+
+    box-shadow:0 0 0 2px rgba(50,74,95,.18);
+
+}
+
+.formular__tlacidlo{
+
+    align-self:flex-end;
+
+    background:var(--primarna);
+
+    color:white;
+
+    border:none;
+
+    border-radius:20px;
+
+    padding:7px 20px;
+
+    font-size:9px;
+
+    cursor:pointer;
+
+    box-shadow:0 3px 7px rgba(0,0,0,.25);
+
+}
+
+.kontaktne_udaje{
+
+    margin-top:82px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.kontaktne_udaje__polozka{
+
+    width:100%;
+
+    max-width:390px;
+
+    height:27px;
+
+    border:2px solid #111;
+
+    border-radius:7px;
+
+    color:#111;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 12px;
+
+}
+
+.kontaktne_udaje__polozka:hover{
+
+    background:var(--primarna);
+
+    color:white;
+
+}
+
+.socialne_siete{
+
+    display:flex;
+
+    gap:9px;
+
+    margin-top:20px;
+
+}
+
+.socialne_siete__odkaz img{
+
+    width:45px;
+
+    height:45px;
+
+    object-fit:contain;
+
+}
+
+.socialne_siete__odkaz:hover{
+
+    transform:scale(1.08);
+
+}
+
+/* FOOTER */
+
+.footer{
+
+    background:var(--footer);
+
+    text-align:center;
+
+    padding:18px 10px;
+
+}
+
+.footer__text{
+
+    margin:0;
+
+    font-size:9px;
+
+}
+
+/* DESKTOP */
+
+@media(min-width:769px){
+
+    .header{
+
+        padding:0 50px;
+
+    }
+
+    .header__menu{
+
+        display:none;
+
+    }
+
+    .header__nav{
+
+        display:flex;
+
+        gap:48px;
+
+    }
+
+    .main,
+
+    .kontakt{
+
+        max-width:1000px;
+
+        margin:auto;
+
+    }
+
+    .hero{
+
+        flex-direction:row;
+
+        justify-content:center;
+
+        text-align:left;
+
+    }
+
+    .portfolio-card{
+
+        grid-template-columns:180px 1fr;
+
+    }
+
+    .portfolio-card__image{
+
+        width:180px;
+
+        height:180px;
+
+    }
+
+}
+ 

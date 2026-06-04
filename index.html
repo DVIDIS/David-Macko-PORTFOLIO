@@ -4,29 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="index">
     <header class="header">
         <div class="header__logo">
-            <img src="assets/images/logo.png" alt="moje_logo">
-        </div>  
-
-        <div class="header__menu">&#9776; 
+            <img src="images/logo.png" alt="moje_logo">
         </div>
 
-        <nav class="header__nav">
-            <a href="" class="header__link">Domov</a>
-            <a href="" class="header__link">Portfolio</a>
-            <a href="" class="header__link">O mne</a>
-            <a href="" class="header__link">Kontakt</a>
+        <button class="header__menu" type="button" aria-label="Otvoriť menu" aria-expanded="false">&#9776;</button>
+
+        <nav class="header__nav" aria-label="Hlavná navigácia">
+            <a href="index.html" class="header__link">Domov</a>
+            <a href="portfolio.html" class="header__link">Portfolio</a>
+            <a href="o_mne.html" class="header__link">O mne</a>
+            <a href="kontakt.html" class="header__link">Kontakt</a>
         </nav>
-        </header>
+    </header>
 
 <main class="main">
     <section class="hero">
         <div class="hero__obrazok">
-            <img src="assets/images/Image (3).jpg" alt="profilova_fotka">
+            <img src="images/Image (3).jpg" alt="profilova_fotka">
         </div>
 
         <div class="hero__obsah">
@@ -39,7 +38,7 @@
             
             <p class="hero__text">Volám sa Dávid Macko som grafik digitálnych medií ktorý tvorí vizuály s dôrazom na detail, kreativitu a funkčný dizajn. Pomáham značkám vyniknúť v online svete.</p>
 
-            <button class="hero__tlacidlo">Viac o mne</button>
+            <a href="o_mne.html" class="hero__tlacidlo">Viac o mne</a>
         </div>
     </section>
 <section class="projekty">
@@ -48,28 +47,28 @@
     <article class="projekty__karta">
         <h3 class="projekty__karta__nadpis">Instagram post</h3>
         <div class="projekty__obsah">
-            <img src="assets/images/12.1. 2027 (2) (1).png" alt="instagram_post" class="projekty__obrazok">
+            <img src="images/12.1. 2027 (2) (1).png" alt="instagram_post" class="projekty__obrazok">
         <p class="projekty__info">Zimná grafika pozýva na korčuľovanie na jazere. Obsahuje dátum akcie a ilustráciu páru v zasneženej prírode.</p>
         </div>
     </article>
 
     <article>
-        <h3 class="projekt__karta__nadpis">Logo fastfoodu</h3>
+        <h3 class="projekty__karta__nadpis">Logo fastfoodu</h3>
         <div class="projekty__obsah">
-            <img src="assets/images/BITE (1)-2.png" alt="logo_fastfoodu" class="projekty__obrazok">
+            <img src="images/BITE (1)-2.png" alt="logo_fastfoodu" class="projekty__obrazok">
         <p class="projekty__info">Logo pre fastfood zobrazuje šťavnatý burger v kruhovom ráme. Podčiarkuje rýchlosť, čerstvosť a dobrú chuť jedla.</p>
         </div>
 
         </article>
     <article>
-        <h3 class="projekt__karta__nadpis">Veľkonočná pohľadnica</h3>
+        <h3 class="projekty__karta__nadpis">Veľkonočná pohľadnica</h3>
         <div class="projekty__obsah">
-            <img src="assets/images/velkonocna pohladnica.png" alt="velkonocna_pohladnica" class="projekty__obrazok">
+            <img src="images/velkonocna pohladnica.png" alt="velkonocna_pohladnica" class="projekty__obrazok">
         <p class="projekty__info">Veľkonočná pohľadnica s jemným kvetinovým motívom a krížom, vyjadrujúca pokoj a požehnanie sviatkov.</p>
         </div>
     </article>
 
-    <button class="projekty__tlacidlo">Viac projektov tu</button>
+    <a href="portfolio.html" class="projekty__tlacidlo">Viac projektov tu</a>
 </section>
 </main>
 
@@ -81,5 +80,28 @@
     </p>
 
 </footer>
+
+<script>
+    const menuButton = document.querySelector('.header__menu');
+    const header = document.querySelector('.header');
+    const headerNav = document.querySelector('.header__nav');
+
+    if (menuButton && header && headerNav) {
+        menuButton.addEventListener('click', () => {
+            const isOpen = headerNav.classList.toggle('header__nav--open');
+            header.classList.toggle('header--open', isOpen);
+            menuButton.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        // close menu when clicking a nav link
+        headerNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                headerNav.classList.remove('header__nav--open');
+                header.classList.remove('header--open');
+                menuButton.setAttribute('aria-expanded', 'false');
+            });
+        });
+    }
+</script>
 </body>
 </html>

@@ -1,11 +1,198 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    
+<body class="portfolio">
+    <header class="header">
+        <div class="header__logo">
+            <img src="images/logo.png" alt="moje_logo">
+        </div>
+
+        <button class="header__menu" type="button" aria-label="Otvoriť menu" aria-expanded="false">&#9776;</button>
+
+        <nav class="header__nav" aria-label="Hlavná navigácia">
+            <a href="index.html" class="header__link">Domov</a>
+            <a href="portfolio.html" class="header__link">Portfolio</a>
+            <a href="o_mne.html" class="header__link">O mne</a>
+            <a href="kontakt.html" class="header__link">Kontakt</a>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <div class="hero__obsah">
+                <h1 class="hero__nadpis">Portfólio</h1>
+                <p class="hero__text">Moje projekty vytvorené počas štúdia.</p>
+            </div>
+        </section>
+
+        <section class="portfolio-list">
+            <article class="portfolio-card">
+                <div class="portfolio-card__image">
+                    <img src="images/12.1. 2027 (2) (1).png" alt="Instagram post">
+                </div>
+                <div class="portfolio-card__content">
+                    <h3 class="portfolio-card__title">Instagram post</h3>
+                    <p class="portfolio-card__description">Zimná grafika pozýva na korčuľovanie na jazere. Obsahuje dátum akcie a ilustráciu páru v zasneženej prírode.</p>
+                    <div class="portfolio-card__footer">
+                        <div class="portfolio-card__tools">
+                            <img src="assets/icons/canva.png" alt="Canva" class="portfolio-card__tool-icon" title="Canva">
+                        </div>
+                        <button class="btn btn--project portfolio-view-btn" data-image="images/12.1. 2027 (2) (1).png" data-title="Instagram post">Zobraziť projekt</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="portfolio-card">
+                <div class="portfolio-card__image">
+                    <img src="images/BITE (1)-2.png" alt="Logo fastfoodu">
+                </div>
+                <div class="portfolio-card__content">
+                    <h3 class="portfolio-card__title">Logo fastfoodu</h3>
+                    <p class="portfolio-card__description">Logo pre fastfood zobrazuje šťavnatý burger v kruhovom ráme. Podčiarkuje rýchlosť, čerstvosť a dobrú chuť jedla.</p>
+                    <div class="portfolio-card__footer">
+                        <div class="portfolio-card__tools">
+                            <img src="assets/icons/canva.png" alt="Canva" class="portfolio-card__tool-icon" title="Canva">
+                        </div>
+                        <button class="btn btn--project portfolio-view-btn" data-image="images/BITE (1)-2.png" data-title="Logo fastfoodu">Zobraziť projekt</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="portfolio-card">
+                <div class="portfolio-card__image">
+                    <img src="images/jednobodova perspektiva hotovo (1)-1.png" alt="Jednobuďová perspektíva">
+                </div>
+                <div class="portfolio-card__content">
+                    <h3 class="portfolio-card__title">Jednobuďová perspektíva</h3>
+                    <p class="portfolio-card__description">Geometrická kresba chodby s výraznou šachovnicovou podlahou. Využíva jeden úbežník a moderné umenie na stenách.</p>
+                    <div class="portfolio-card__footer">
+                        <div class="portfolio-card__tools">
+                            <img src="assets/icons/ilustrator.png" alt="Illustrator" class="portfolio-card__tool-icon" title="Illustrator">
+                        </div>
+                        <button class="btn btn--project portfolio-view-btn" data-image="images/jednobodova perspektiva hotovo (1)-1.png" data-title="Jednobuďová perspektíva">Zobraziť projekt</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="portfolio-card">
+                <div class="portfolio-card__image">
+                    <img src="images/kalendar.png" alt="Kalendár">
+                </div>
+                <div class="portfolio-card__content">
+                    <h3 class="portfolio-card__title">Kalendár</h3>
+                    <p class="portfolio-card__description">Minimalistický kalendár na rok 2025 s motívom horskej krajiny. Čistý dizajn, jemné zelené tóny a prehľadné rozloženie mesiacov vytvárajú štýlový aj praktický doplnok.</p>
+                    <div class="portfolio-card__footer">
+                        <div class="portfolio-card__tools">
+                            <img src="assets/icons/photoshop.png" alt="Photoshop" class="portfolio-card__tool-icon" title="Photoshop">
+                        </div>
+                        <button class="btn btn--project portfolio-view-btn" data-image="images/kalendar.png" data-title="Kalendár">Zobraziť projekt</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="portfolio-card">
+                <div class="portfolio-card__image">
+                    <img src="images/nieco.png" alt="Portrait">
+                </div>
+                <div class="portfolio-card__content">
+                    <h3 class="portfolio-card__title">Nástroje na tvorbu cesty</h3>
+                    <p class="portfolio-card__description">Štylizovaný portrét dieťaťa v teplých oranžovo-hnedých tónoch. Jednoduché tvary a výrazné kontúry dodávajú obrazu moderný, mierne abstraktný charakter.</p>
+                    <div class="portfolio-card__footer">
+                        <div class="portfolio-card__tools">
+                            <img src="assets/icons/photoshop.png" alt="Photoshop" class="portfolio-card__tool-icon" title="Photoshop">
+                        </div>
+                        <button class="btn btn--project portfolio-view-btn" data-image="images/nieco.png" data-title="Nástroje na tvorbu cesty">Zobraziť projekt</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="portfolio-card">
+                <div class="portfolio-card__image">
+                    <img src="images/velkonocna pohladnica.png" alt="Veľkonočná pohľadnica">
+                </div>
+                <div class="portfolio-card__content">
+                    <h3 class="portfolio-card__title">Veľkonočná pohľadnica</h3>
+                    <p class="portfolio-card__description">Veľkonočná pohľadnica s jemným kvetinovým motívom a krížom, vyjadrujúca pokoj a požehnanie sviatkov.</p>
+                    <div class="portfolio-card__footer">
+                        <div class="portfolio-card__tools">
+                            <img src="assets/icons/photoshop.png" alt="Photoshop" class="portfolio-card__tool-icon" title="Photoshop">
+                        </div>
+                        <button class="btn btn--project portfolio-view-btn" data-image="images/velkonocna pohladnica.png" data-title="Veľkonočná pohľadnica">Zobraziť projekt</button>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Modal -->
+        <div id="portfolioModal" class="portfolio-modal">
+            <div class="portfolio-modal__content">
+                <button class="portfolio-modal__close" aria-label="Zatvoriť">×</button>
+                <h2 class="portfolio-modal__title"></h2>
+                <img class="portfolio-modal__image" src="" alt="Project image">
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">© 2026 Dávid Macko. Dizajn, ktorý zaujme. Všetky práva vyhradené</p>
+    </footer>
+
+    <script>
+        const menuButton = document.querySelector('.header__menu');
+        const header = document.querySelector('.header');
+        const headerNav = document.querySelector('.header__nav');
+
+        if (menuButton && header && headerNav) {
+            menuButton.addEventListener('click', () => {
+                const isOpen = headerNav.classList.toggle('header__nav--open');
+                header.classList.toggle('header--open', isOpen);
+                menuButton.setAttribute('aria-expanded', String(isOpen));
+            });
+
+            headerNav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    headerNav.classList.remove('header__nav--open');
+                    header.classList.remove('header--open');
+                    menuButton.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
+
+        // Portfolio Modal Handler
+        const modal = document.getElementById('portfolioModal');
+        const modalImage = document.querySelector('.portfolio-modal__image');
+        const modalTitle = document.querySelector('.portfolio-modal__title');
+        const closeButton = document.querySelector('.portfolio-modal__close');
+        const viewButtons = document.querySelectorAll('.portfolio-view-btn');
+
+        viewButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const image = button.getAttribute('data-image');
+                const title = button.getAttribute('data-title');
+                
+                modalImage.src = image;
+                modalTitle.textContent = title;
+                modal.classList.add('portfolio-modal--open');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        closeButton.addEventListener('click', () => {
+            modal.classList.remove('portfolio-modal--open');
+            document.body.style.overflow = 'auto';
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('portfolio-modal--open');
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
 </body>
 </html>

@@ -1,11 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>O mne</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    
+<body class="o_mne">
+    <header class="header">
+        <div class="header__logo">
+            <img src="images/logo.png" alt="moje_logo">
+        </div>
+
+        <button class="header__menu" type="button" aria-label="Otvoriť menu" aria-expanded="false">&#9776;</button>
+
+        <nav class="header__nav" aria-label="Hlavná navigácia">
+            <a href="index.html" class="header__link">Domov</a>
+            <a href="portfolio.html" class="header__link">Portfolio</a>
+            <a href="o_mne.html" class="header__link">O mne</a>
+            <a href="kontakt.html" class="header__link">Kontakt</a>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <div class="hero__obrazok">
+                <img src="images/Image (3).jpg" alt="profilova_fotka">
+            </div>
+
+            <div class="hero__obsah">
+                <h1 class="hero__nadpis">O mne</h1>
+                <p class="hero__text">Ahoj, som grafik digitálnych médií. Premieňam nápady na moderné a funkčné vizuály pre jednotlivcov aj firmy, ktoré sa chcú odlíšiť v online priestore.</p>
+                <p class="hero__text">Pri tvorbe využívam nástroje ako Adobe Photoshop, Adobe Illustrator a Adobe Premiere Pro na grafiku, ilustrácie a video obsah. Zároveň pracujem vo Visual Studio, čo mi pomáha prepájať dizajn s digitálnym prostredím.</p>
+                <div class="hero__icons">
+                    <img class="icon_badge" src="assets/icons/premier.png" alt="Canva">
+                    <img class="icon_badge" src="assets/icons/ilustrator.png" alt="Illustrator">
+                    <img class="icon_badge" src="assets/icons/photoshop.png" alt="Photoshop">
+                    <img class="icon_badge" src="assets/icons/visual studio.png" alt="Visual Studio">
+                    <img class="icon_badge" src="assets/icons/canva.png" alt="Canva">
+                </div>
+            </div>
+        </section>
+
+        <section class="projekty">
+            <h2 class="projekty__nadpis">Moje zručnosti</h2>
+
+            <article class="projekty__karta">
+                <h3 class="projekty__karta__nadpis">Grafický dizajn</h3>
+                <div class="projekty__obsah">
+                    <ul class="projekty__list">
+                        <li>Grafický dizajn</li>
+                        <li>Úprava a retuš fotografií</li>
+                        <li>Tvorba digitálnej grafiky (sociálne siete, web, reklama)</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="projekty__karta">
+                <h3 class="projekty__karta__nadpis">Branding</h3>
+                <div class="projekty__obsah">
+                    <ul class="projekty__list">
+                        <li>Branding</li>
+                        <li>Návrh vizuálnej identity</li>
+                        <li>Logo a vizuálny štýl značky</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="projekty__karta">
+                <h3 class="projekty__karta__nadpis">Motion & animácia</h3>
+                <div class="projekty__obsah">
+                    <ul class="projekty__list">
+                        <li>Jednoduché animácie</li>
+                        <li>Základy motion grafiky</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="projekty__karta">
+                <h3 class="projekty__karta__nadpis">Príprava grafiky</h3>
+                <div class="projekty__obsah">
+                    <ul class="projekty__list">
+                        <li>Podklady pre digitálne použitie</li>
+                        <li>Podklady pre tlač</li>
+                    </ul>
+                </div>
+            </article>
+
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">© 2026 Dávid Macko. Dizajn, ktorý zaujme. Všetky práva vyhradené</p>
+    </footer>
+
+    <script>
+        const menuButton = document.querySelector('.header__menu');
+        const header = document.querySelector('.header');
+        const headerNav = document.querySelector('.header__nav');
+
+        if (menuButton && header && headerNav) {
+            menuButton.addEventListener('click', () => {
+                const isOpen = headerNav.classList.toggle('header__nav--open');
+                header.classList.toggle('header--open', isOpen);
+                menuButton.setAttribute('aria-expanded', String(isOpen));
+            });
+
+            headerNav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    headerNav.classList.remove('header__nav--open');
+                    header.classList.remove('header--open');
+                    menuButton.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
+    </script>
 </body>
 </html>

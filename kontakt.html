@@ -3,9 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <main class="kontakt">
+<header class="header">
+        <div class="header__logo">
+            <img src="images/logo.png" alt="moje_logo">
+        </div>
+
+        <button class="header__menu" type="button" aria-label="Otvoriť menu" aria-expanded="false">&#9776;</button>
+
+        <nav class="header__nav" aria-label="Hlavná navigácia">
+            <a href="index.html" class="header__link">Domov</a>
+            <a href="portfolio.html" class="header__link">Portfolio</a>
+            <a href="o_mne.html" class="header__link">O mne</a>
+            <a href="kontakt.html" class="header__link">Kontakt</a>
+        </nav>
+    </header>
+    <section class="kontakt__hero">
+        <h1 class="kontakt__nadpis">Kontakt</h1>
+
+        <h2 class="kontakt__podnadpis">Ozvi sa mi !</h2>
+
+        <p class="kontakt__text">
+            Ak máš nápad, projekt alebo len chceš povedať ahoj,
+            kľudne mi napíš. Teším sa na správu!
+        </p>
+    </section>
+
+    <section class="formular">
+
+        <form class="formular__obsah">
+
+            <div class="formular__riadok">
+                <input
+                    type="text"
+                    class="formular__pole"
+                    placeholder="Meno"
+                    required>
+                    
+                <input
+                    type="text"
+                    class="formular__pole"
+                    placeholder="Priezvisko"
+                    required>
+            </div>
+
+            <textarea
+                class="formular__sprava"
+                placeholder="Správa"
+                required></textarea>
+
+            <button type="submit" class="formular__tlacidlo">
+                Odoslať
+            </button>
+
+        </form>
+
+    </section>
+
+    <section class="kontaktne_udaje">
+
+        <a href="mailto:david.macko@piaristi-pd.sk"
+            class="kontaktne_udaje__polozka">
+            david.macko@piaristi-pd.sk
+        </a>
+
+        <a href="tel:+421912345678"
+            class="kontaktne_udaje__polozka">
+            0912345678
+        </a>
+
+    </section>
+
+    <section class="socialne_siete">
+
+        <a href="#" class="socialne_siete__odkaz">
+            <img src="assets/icons/instagram.png" alt="Instagram">
+        </a>
+
+        <a href="#" class="socialne_siete__odkaz">
+            <img src="assets/icons/facebook.png" alt="Facebook">
+        </a>
+
+        <a href="#" class="socialne_siete__odkaz">
+            <img src="assets/icons/whatsapp.png" alt="WhatsApp">
+        </a>
+
+        <a href="#" class="socialne_siete__odkaz">
+            <img src="assets/icons/twitter.png" alt="X">
+        </a>
+
+    </section>
+    </main>
+        <footer class="footer">
+        <p class="footer__text">© 2026 Dávid Macko. Dizajn, ktorý zaujme. Všetky práva vyhradené</p>
+        </footer>
+<script>
+    const menuButton = document.querySelector('.header__menu');
+    const header = document.querySelector('.header');
+    const headerNav = document.querySelector('.header__nav');
+
+    if (menuButton && header && headerNav) {
+        menuButton.addEventListener('click', () => {
+            const isOpen = headerNav.classList.toggle('header__nav--open');
+            header.classList.toggle('header--open', isOpen);
+            menuButton.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        // close menu when clicking a nav link
+        headerNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                headerNav.classList.remove('header__nav--open');
+                header.classList.remove('header--open');
+                menuButton.setAttribute('aria-expanded', 'false');
+            });
+        });
+    }
+</script>
 </body>
 </html>
